@@ -1,4 +1,4 @@
-﻿# Qyx Medtech — Website Platform
+# Qyx Medtech — Website Platform
 
 Official website and specialist onboarding platform for **Qyx Medtech** — a clinical consultancy platform for male reproductive healthcare.
 
