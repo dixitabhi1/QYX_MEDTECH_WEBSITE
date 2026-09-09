@@ -1,8 +1,9 @@
-{
+﻿{
   "name": "qyx-medtech-website",
   "version": "1.0.0",
   "description": "The consultancy platform for male fertility care — official website launching doctor-first.",
   "scripts": {
+    "build": "echo 'Static build ready'",
     "start": "npx serve ."
   },
   "keywords": [
@@ -15,4 +16,3 @@
   "author": "Qyx Medtech",
   "license": "UNLICENSED"
 }
-
