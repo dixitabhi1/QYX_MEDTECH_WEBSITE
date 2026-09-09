@@ -1,0 +1,62 @@
+/* ==========================================================================
+   Qyx Medtech — Design Tokens & CSS Variables
+   Derived from references/design-system.md
+   ========================================================================== */
+
+:root {
+  /* Brand Color Palette */
+  --color-teal: #123C3C;          /* Deep Clinical Teal - Primary brand, headers, nav */
+  --color-teal-light: #1D5454;    /* Subtle hover state for dark teal elements */
+  --color-teal-dark: #0A2424;     /* Deepest shade for footer/contrast */
+  --color-coral: #E2694B;         /* Warm Coral - Primary CTA, accent, active states */
+  --color-coral-dark: #C8532F;    /* Primary CTA hover state */
+  --color-coral-light: #FCECE8;   /* Soft coral tint for tags and highlights */
+  --color-sage: #A9C1B5;          /* Soft Sage - Secondary accents, icon fills, dividers */
+  --color-sage-light: #EBF2EE;    /* Soft sage background tint */
+  --color-sand: #F6F3EC;          /* Warm Sand - Editorial page background */
+  --color-sand-card: #FFFFFF;     /* Pure white for elevated cards on sand background */
+  --color-charcoal: #2B2B29;      /* Charcoal - Primary high-contrast body text */
+  --color-stone: #767671;         /* Stone Gray - Secondary/meta text, captions */
+  --color-hairline: #E4DFD2;      /* Hairline - Clean 1px borders & dividers */
+  --color-white: #FFFFFF;
+
+  /* Typography */
+  --font-serif: 'Fraunces', Georgia, serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Spacing Scale (8px base unit) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+
+  /* Section Spacing */
+  --section-padding-y: 96px;
+  --section-padding-mobile-y: 56px;
+
+  /* Corner Radii - Strict Consistency */
+  --radius-btn: 8px;
+  --radius-input: 8px;
+  --radius-card: 16px;
+  --radius-pill: 9999px;
+  --radius-modal: 20px;
+
+  /* Elevation - Single disciplined shadow */
+  --shadow-subtle: 0 4px 16px rgba(18, 60, 60, 0.08);
+  --shadow-floating: 0 16px 40px rgba(18, 60, 60, 0.14);
+  --shadow-modal: 0 24px 60px rgba(18, 60, 60, 0.22);
+
+  /* Layout */
+  --container-max: 1200px;
+  --transition-fast: 0.15s ease;
+  --transition-smooth: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+

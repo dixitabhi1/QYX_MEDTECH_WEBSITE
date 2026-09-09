@@ -1,0 +1,186 @@
+/* ==========================================================================
+   Qyx Medtech — Base & Layout Styles
+   Derived from references/design-system.md
+   ========================================================================== */
+
+/* Modern CSS Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-sand);
+  color: var(--color-charcoal);
+  line-height: 1.55;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Typography Hierarchy */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  color: var(--color-teal);
+  line-height: 1.15;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 3.4rem); /* 40px - 54px */
+  margin-bottom: var(--space-4);
+}
+
+h2 {
+  font-size: clamp(1.85rem, 3.5vw, 2.25rem); /* 30px - 36px */
+  margin-bottom: var(--space-4);
+}
+
+h3 {
+  font-size: clamp(1.35rem, 2.5vw, 1.55rem); /* 22px - 25px */
+  margin-bottom: var(--space-3);
+}
+
+h4 {
+  font-size: 1.15rem;
+  margin-bottom: var(--space-2);
+}
+
+p {
+  font-size: 1.0625rem; /* 17px */
+  color: var(--color-charcoal);
+  margin-bottom: var(--space-4);
+  line-height: 1.6;
+}
+
+p.lead {
+  font-size: 1.1875rem; /* 19px */
+  color: var(--color-charcoal);
+  line-height: 1.6;
+  max-width: 620px;
+}
+
+.text-meta {
+  font-size: 0.84rem; /* ~13.5px */
+  color: var(--color-stone);
+  line-height: 1.45;
+}
+
+.text-center { text-align: center; }
+.text-teal { color: var(--color-teal); }
+.text-coral { color: var(--color-coral); }
+.text-stone { color: var(--color-stone); }
+
+a {
+  color: var(--color-teal);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-coral);
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Containers & Layout Grid */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-6);
+  padding-right: var(--space-6);
+}
+
+.section {
+  padding-top: var(--section-padding-y);
+  padding-bottom: var(--section-padding-y);
+  position: relative;
+}
+
+.section-alt {
+  background-color: var(--color-white);
+  border-top: 1px solid var(--color-hairline);
+  border-bottom: 1px solid var(--color-hairline);
+}
+
+.section-sand {
+  background-color: var(--color-sand);
+}
+
+.section-teal {
+  background-color: var(--color-teal);
+  color: var(--color-sand);
+}
+
+.section-teal h1, .section-teal h2, .section-teal h3 {
+  color: var(--color-white);
+}
+
+.section-header {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-bottom: var(--space-12);
+}
+
+.section-header .pill {
+  margin-bottom: var(--space-3);
+}
+
+.section-header p {
+  color: var(--color-stone);
+  font-size: 1.1rem;
+}
+
+/* 12-Column Grid Helpers */
+.grid {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+@media (max-width: 960px) {
+  .section {
+    padding-top: var(--section-padding-mobile-y);
+    padding-bottom: var(--section-padding-mobile-y);
+  }
+
+  .grid-3, .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding-left: var(--space-4);
+    padding-right: var(--space-4);
+  }
+
+  .grid-3, .grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How It Works — Qyx Medtech</title>
+  <meta name="description" content="Discover how Qyx connects male fertility specialists with patients through a verified, secure consultancy platform.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/chatbot.css">
+  <style>
+    .track-tabs {
+      display: inline-flex;
+      background: var(--color-white);
+      padding: 6px;
+      border-radius: 30px;
+      border: 1px solid var(--color-hairline);
+      margin-bottom: 48px;
+    }
+    .tab-btn {
+      padding: 12px 28px;
+      border-radius: 24px;
+      border: none;
+      background-color: transparent;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--color-charcoal);
+      cursor: pointer;
+      transition: all var(--transition-fast);
+    }
+    .tab-btn.active {
+      background-color: var(--color-teal);
+      color: var(--color-white);
+    }
+    .tab-pane {
+      display: none;
+    }
+    .tab-pane.active {
+      display: block;
+    }
+    .storyboard-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 40px;
+    }
+    .story-card {
+      background: var(--color-white);
+      border-radius: var(--radius-card);
+      border: 1px solid var(--color-hairline);
+      padding: 28px;
+      position: relative;
+    }
+    .story-visual {
+      background: var(--color-sand);
+      border-radius: 10px;
+      height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      border: 1px solid var(--color-hairline);
+    }
+    @media (max-width: 960px) {
+      .storyboard-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <img src="assets/logo.png" alt="QYX MedTech" style="height: 38px; width: auto;" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
+        <span style="display: none;">QYX<span>·</span></span>
+      </a>
+      
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="for-doctors.html" class="nav-link">For Doctors</a></li>
+          <li><a href="how-it-works.html" class="nav-link active">How It Works</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact / Apply</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="index.html" class="nav-login" data-trigger="popup-patient">Patient log in</a>
+        <a href="for-doctors.html" class="btn btn-coral btn-sm" data-trigger="popup-doctor">Join as a Doctor</a>
+      </div>
+
+      <button class="menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="section section-sand" style="padding-top: var(--space-16); padding-bottom: var(--space-10);">
+    <div class="container text-center" style="max-width: 800px;">
+      <span class="pill pill-teal">PLATFORM ARCHITECTURE</span>
+      <h1 style="margin-top: 16px; margin-bottom: 20px;">How Qyx works</h1>
+      <p class="lead" style="margin: 0 auto 36px;">
+        A specialized clinical bridge connecting verified male fertility specialists with men seeking clear, private answers. Explore the process from either perspective.
+      </p>
+
+      <!-- Track Switcher -->
+      <div class="track-tabs">
+        <button type="button" class="tab-btn active" data-tab="doctorTrack">Doctor Track</button>
+        <button type="button" class="tab-btn" data-tab="patientTrack">Patient Track</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Track Content -->
+  <section class="section section-alt">
+    <div class="container">
+      
+      <!-- Doctor Track Pane -->
+      <div id="doctorTrack" class="tab-pane active">
+        <div class="section-header">
+          <span class="pill">FOR SPECIALISTS</span>
+          <h2>The doctor onboarding &amp; practice workflow</h2>
+          <p>Four deliberate steps to bring your clinical consultancy online with complete autonomy.</p>
+        </div>
+
+        <div class="grid grid-4">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <h4 class="step-title">Express Interest</h4>
+            <p class="step-desc">Fill out our 2-minute application with basic contact information and medical specialization.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <h4 class="step-title">Primary Credentialing</h4>
+            <p class="step-desc">Our medical committee verifies registration status with medical boards and conducts a 15-minute intro call.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <h4 class="step-title">Profile Activation</h4>
+            <p class="step-desc">Set your consultation fees, configure available time slots, and receive your platform verified badge.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">4</div>
+            <h4 class="step-title">Conduct Consults</h4>
+            <p class="step-desc">Meet patients over secure HD video. Review test histories, provide advice, and receive weekly payouts.</p>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 48px;">
+          <a href="for-doctors.html" class="btn btn-teal">Review Full Doctor Requirements →</a>
+        </div>
+      </div>
+
+      <!-- Patient Track Pane -->
+      <div id="patientTrack" class="tab-pane">
+        <div class="section-header">
+          <span class="pill pill-teal">FOR PATIENTS &amp; PARTNERS</span>
+          <h2>The patient consultation pathway</h2>
+          <p>Direct, unhurried access to verified male reproductive specialists without clinical runaround.</p>
+        </div>
+
+        <div class="grid grid-4">
+          <div class="step-card">
+            <div class="step-number" style="background-color: var(--color-coral);">1</div>
+            <h4 class="step-title">Search or Match</h4>
+            <p class="step-desc">Identify a qualified specialist based on clinical focus, language, and scheduling availability.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-number" style="background-color: var(--color-coral);">2</div>
+            <h4 class="step-title">Confidential Booking</h4>
+            <p class="step-desc">Choose a convenient video or audio consultation time slot. Upfront pricing with zero hidden fees.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-number" style="background-color: var(--color-coral);">3</div>
+            <h4 class="step-title">Private Video Consult</h4>
+            <p class="step-desc">Discuss your medical background, review prior semen analysis reports, and ask questions without judgment.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-number" style="background-color: var(--color-coral);">4</div>
+            <h4 class="step-title">Care Plan &amp; Follow-up</h4>
+            <p class="step-desc">Receive digital summaries and follow up with the same specialist as your clinical pathway progresses.</p>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 48px;">
+          <button type="button" class="btn btn-coral" data-trigger="popup-patient">Find a Verified Specialist</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 6-Step Doctor-to-Patient Journey Storyboard -->
+  <section class="section section-sand">
+    <div class="container">
+      <div class="section-header">
+        <span class="pill pill-teal">END-TO-END STORYBOARD</span>
+        <h2>The 6-step doctor-to-patient journey</h2>
+        <p>How the entire ecosystem connects — from credential intake to ongoing clinical care.</p>
+      </div>
+
+      <div class="storyboard-grid">
+        <!-- Step 1 -->
+        <div class="story-card">
+          <div class="step-number">1</div>
+          <div class="story-visual" style="overflow: hidden; padding: 0;">
+            <img src="assets/step-1-apply.jpg" alt="Specialist filling out intake application on laptop" style="width: 100%; height: 100%; object-fit: cover; object-position: center top;">
+          </div>
+          <h4 style="color: var(--color-teal); margin-bottom: 6px;">Doctor applies</h4>
+          <p class="text-meta">A specialist fills out the intake application with credentials, board registration, and clinical focus.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="story-card">
+          <div class="step-number">2</div>
+          <div class="story-visual" style="overflow: hidden; padding: 0;">
+            <img src="assets/step-2-verify.jpg" alt="Medical credentialing specialist reviewing doctor certification" style="width: 100%; height: 100%; object-fit: cover; object-position: center top;">
+          </div>
+          <h4 style="color: var(--color-teal); margin-bottom: 6px;">Verified by Qyx</h4>
+          <p class="text-meta">Our clinical committee verifies state medical council registration, active license, and clinical background.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="story-card">
+          <div class="step-number">3</div>
+          <div class="story-visual" style="overflow: hidden; padding: 0;">
+            <img src="assets/BG-3.png" alt="Specialist practice workspace" style="width: 100%; height: 100%; object-fit: cover; object-position: center top;">
+          </div>
+          <h4 style="color: var(--color-teal); margin-bottom: 6px;">Profile goes live</h4>
+          <p class="text-meta">The doctor's consultancy profile becomes visible and bookable with their chosen hours and direct fee structure.</p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="story-card">
+          <div class="step-number">4</div>
+          <div class="story-visual" style="overflow: hidden; padding: 0;">
+            <img src="assets/patient-2.png" alt="Patient reviewing clinical options" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <h4 style="color: var(--color-teal); margin-bottom: 6px;">Patient finds a match</h4>
+          <p class="text-meta">A visitor searches by language, specialty, or schedule, or is routed confidentially from the triage intake form.</p>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="story-card">
+          <div class="step-number">5</div>
+          <div class="story-visual" style="overflow: hidden; padding: 0;">
+            <img src="assets/step-5-booked.jpg" alt="Patient viewing consultation confirmed on smartphone" style="width: 100%; height: 100%; object-fit: cover; object-position: center center;">
+          </div>
+          <h4 style="color: var(--color-teal); margin-bottom: 6px;">Consult is booked</h4>
+          <p class="text-meta">Patient books directly; both sides receive calendar confirmations, encrypted video links, and automated notifications.</p>
+        </div>
+
+        <!-- Step 6 -->
+        <div class="story-card">
+          <div class="step-number">6</div>
+          <div class="story-visual" style="overflow: hidden; padding: 0;">
+            <img src="assets/patient-4.png" alt="Private video consult" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <h4 style="color: var(--color-teal); margin-bottom: 6px;">Consult happens</h4>
+          <p class="text-meta">Encrypted 1-on-1 video consult takes place; lab report analysis and structured clinical follow-up continue on Qyx.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <img src="assets/logo.png" alt="QYX MedTech" style="height: 34px; width: auto; filter: brightness(0) invert(1);" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
+            <span style="display: none; color: #fff;">QYX<span>·</span></span>
+          </a>
+          <p>The specialized consultancy platform connecting men with expert doctors in male reproductive health.</p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Platform</h5>
+          <ul class="footer-links">
+            <li><a href="for-doctors.html">For Doctors</a></li>
+            <li><a href="how-it-works.html">How It Works</a></li>
+            <li><a href="#" data-trigger="popup-patient">Find a Specialist</a></li>
+            <li><a href="#" data-trigger="chatbot">AI Concierge</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Company</h5>
+          <ul class="footer-links">
+            <li><a href="about.html">About Qyx</a></li>
+            <li><a href="contact.html">Contact &amp; Apply</a></li>
+            <li><a href="about.html#advisory">Clinical Advisory</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Compliance</h5>
+          <ul class="footer-links">
+            <li><a href="about.html#compliance">ISO 27001 (In Progress)</a></li>
+            <li><a href="about.html#compliance">HIPAA-Aligned Protocols</a></li>
+            <li><a href="about.html#compliance">DPDP Act Framework</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Qyx Medtech Inc. All rights reserved.</div>
+        <div>Telemedicine consultancy platform. Medical judgment exercised independently by licensed practitioners.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/popup.js"></script>
+  <script src="js/chatbot.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
+
